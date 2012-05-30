@@ -21,16 +21,27 @@ python setup.py install
 Examples
 ========
 
->> import filetype
->> filetype.get_type("testdata/test.csv")
+import filetype
+filetype.get_type("testdata/test.csv")
+
 'csv'
->> filetype.get_type("testdata/test.gz")
+
+filetype.get_type("testdata/test.gz")
+
 'gz'
->> filetype.is_compression("testdata/test.tar")
+
+filetype.is_compression("testdata/test.tar")
+
 False
->> filetype.is_compression("testdata/test.bz2")
+
+filetype.is_compression("testdata/test.bz2")
+
 True
->> filetype.is_compression_by_type("zip")
+
+filetype.is_compression_by_type("zip")
+
 False
->> filetype.is_archived("testdata/test.zip")
+
+filetype.is_archived("testdata/test.zip")
+
 True
