@@ -22,6 +22,7 @@ Examples
 ========
 
 import filetype
+
 filetype.get_type("testdata/test.csv")
 
 'csv'
