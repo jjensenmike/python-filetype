@@ -15,12 +15,13 @@ m = magic.Magic()
 def get_type(fname):
     ftype = m.from_file(fname)
 
+    if fname.lower().endswith('.xlsx') or fname.lower().endswith('.xls') or 'Excel' in ftype:
+        return 'xlsx'
+
     for k in TYPE_MAPPING.keys():
         if k in ftype:
             return TYPE_MAPPING[k]
 
-    if 'Excel' in ftype:
-        return 'xlsx'
 
     # solutions here from http://stackoverflow.com/questions/9084228/python-to-check-if-a-gzipped-file-is-xml-or-csv
     # and http://stackoverflow.com/questions/2984888/check-if-file-has-a-csv-format-with-python
